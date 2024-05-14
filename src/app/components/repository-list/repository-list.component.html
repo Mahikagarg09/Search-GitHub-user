@@ -1,0 +1,23 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-14 gap-y-8 mt-10">
+  <div *ngFor="let repo of repositories" class="border rounded p-4 mb-4 border-white overflow-hidden">
+    <h3 class="text-xl font-bold mt-4">{{ repo.name }}</h3>
+    <p class="mt-4">{{ repo.description }}</p>
+    <ul class="flex flex-wrap max-w-[100%] mt-4">
+      <li *ngFor="let topic of repo.topics" class="bg-blue-600 mr-2 mt-4 p-2 text-white border rounded border-blue-600 font-medium">
+        {{ topic }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="flex justify-center my-8">
+  <select class="mr-4 text-black rounded font-medium px-2" [(ngModel)]="pageSize" (change)="onPageSizeChange($event)">
+    <option *ngFor="let size of [10, 20,20,40, 50,60,70,80,90, 100]" [value]="size">{{ size }}</option>
+  </select>
+  <div class="text-white mr-4 pt-2">Page:</div>
+  <div class="flex">
+    <button class="mr-2 bg-green-500 text-white p-2 font-medium rounded" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">Previous</button>
+    <div class="border border-gray-700 rounded py-2 px-4">{{ currentPage }}</div>
+    <button class="ml-2  bg-green-500 text-white p-2 font-medium rounded"  [disabled]="totalRepositories === 0" (click)="onPageChange(currentPage + 1)">Next</button>
+  </div>
+</div>

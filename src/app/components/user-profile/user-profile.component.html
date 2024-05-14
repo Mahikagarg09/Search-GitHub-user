@@ -1,0 +1,19 @@
+<div class="items-center flex justify-center w-[90%]">
+<div class="flex items-center justify-center mt-4 space-x-4">
+    <div class="rounded-full overflow-hidden">
+      <img [src]="user?.avatar_url" alt="User Avatar">
+    </div>
+    <div class="ml-12 my-auto ">
+      <h2 class="text-xl md:text-4xl font-bold mb-2">{{ user?.name }}</h2>
+      <p class="text-white text-base md:text-xl mt-3 ">{{ user?.bio }}</p>
+      <p class="text-white text-base md:text-xl mt-3">{{user?.email ? '📧   ': ''}} {{ user?.email }}</p>
+      <p class="text-white text-base md:text-xl mt-3">{{ user?.blog }}</p>
+      <p class="text-white text-base md:text-xl mt-3">𝕏   {{ user?.twitter_username }}</p>
+      <p class="text-white text-base md:text-xl mt-3">{{ user?.followers }} Followers</p>
+      <p class="text-white text-base md:text-xl mt-3">{{ user?.following}} Following</p>
+      <p class="text-white text-base md:text-xl mt-3">{{ user?.location }}</p>
+      <a [href]="user?.html_url" target="_blank" class="text-blue-500 hover:underline">{{user?.html_url}}</a>
+    </div>
+  </div>
+</div>
+  

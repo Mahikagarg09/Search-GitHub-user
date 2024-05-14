@@ -1,0 +1,31 @@
+<div class="container mx-auto text-white">
+  <div class="flex justify-center items-center">
+    <div class="w-[90%] flex">
+      <img class="h-20 w-20 -ml-10" src="https://imgs.search.brave.com/z2UG3vsY0py5p6bEw1-Jri4kiEwen-POL5xLrBgG2fI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvZ2l0aHViL3Nt/YWxsL2dpdGh1Yl9Q/Tkc4OC5wbmc"/>
+      <app-search-bar class="flex-grow" (searchUser)="searchByUsername($event)"></app-search-bar>
+    </div>
+  </div>
+  <ng-container *ngIf="user; else loading">
+    <app-user-profile class="flex justify-center" [user]="user"></app-user-profile>
+  </ng-container>
+  <ng-template #loading>
+    <div *ngIf="isLoading">
+      <app-skeleton-loader class="flex justify-center mt-5"></app-skeleton-loader>
+    </div>
+    <div class="text-white text-bold text-xl text-center" *ngIf="searchedUserNotFound && !isLoading && !user">
+      No user found! Please enter a valid username.
+    </div>
+  </ng-template>
+  <div class="flex justify-center items-center" *ngIf="!isLoading">
+    <div class="w-[90%] md:w-[70%] flex justify-center items-center">
+      <app-repository-list 
+        [repositories]="repositories"
+        [totalRepositories]="totalRepositories"
+        [pageSize]="pageSize"
+        (pageChange)="onPageChange($event)"
+        (pageSizeChange)="onPageSizeChange($event)">
+        [totalPages]="totalPages"
+      </app-repository-list>
+    </div>
+  </div>
+</div>
