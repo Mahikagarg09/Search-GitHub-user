@@ -24,5 +24,5 @@ It uses Angular 14+ to make a single-page application (SPA) that takes a GitHub 
 ![image](https://github.com/Mahikagarg09/fyle-internship-challenge-23/assets/98404416/6dead187-55bb-4428-b605-025a8f9d338a)
 
 # Live Link
-[Live Link](https://github-search-username-omega.vercel.app/)
+[Live Link](https://search-git-hub-user.vercel.app/)
 
