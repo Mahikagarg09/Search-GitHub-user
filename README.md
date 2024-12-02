@@ -19,9 +19,8 @@ It uses Angular 14+ to make a single-page application (SPA) that takes a GitHub 
 7. To run the tests, you can use the `ng test` command in your terminal.
 
 # Screenshots
-![image](https://github.com/Mahikagarg09/fyle-internship-challenge-23/assets/98404416/287c57ed-5b3e-48ab-a4bc-e233627a97ae)
-![image](https://github.com/Mahikagarg09/fyle-internship-challenge-23/assets/98404416/55226007-db5d-48cb-b457-9ebcb8052ae4)
-![image](https://github.com/Mahikagarg09/fyle-internship-challenge-23/assets/98404416/6dead187-55bb-4428-b605-025a8f9d338a)
+![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/f25f8df1-2bfb-4700-be01-2678cc7cc8f9)
 
 # Live Link
 [Live Link](https://search-git-hub-user.vercel.app/)
